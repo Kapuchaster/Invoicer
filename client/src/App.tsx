@@ -1,9 +1,16 @@
-import { Table } from "./components";
+import { Companies, Flex, Header, Table } from "./components";
 
 import "./App.css";
 
 function App() {
-  return <Table />;
+  return (
+    <>
+      <Table />
+      <div>--------------------------</div>
+      <Header />
+      <Companies />
+    </>
+  );
 }
 
 export default App;
