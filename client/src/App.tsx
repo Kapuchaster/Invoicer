@@ -1,25 +1,23 @@
-import './App.css';
+import React from "react";
+
+import "./App.css";
 
 function App() {
   const logoStyle = {
-    width: '100%',
-    maxWidth: '300px',
+    width: "100%",
+    maxWidth: "300px",
   };
 
   return (
     <table cellPadding="0" cellSpacing="0">
       <tbody>
         <tr className="top">
-          <td colSpan="2">
+          <td colSpan={2}>
             <table>
               <tbody>
                 <tr>
                   <td className="title">
-                    <img
-                      src="cai_logo.svg"
-                      style={logoStyle}
-                      alt="logo"
-                    />
+                    <img src="cai_logo.svg" style={logoStyle} alt="logo" />
                   </td>
 
                   <td>
@@ -34,7 +32,7 @@ function App() {
         </tr>
 
         <tr className="information">
-          <td colSpan="2">
+          <td colSpan={2}>
             <table>
               <tbody>
                 <tr>
