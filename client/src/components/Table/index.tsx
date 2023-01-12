@@ -1,9 +1,6 @@
-const Table = () => {
-  const logoStyle = {
-    width: "100%",
-    maxWidth: "300px",
-  };
+import { Logo } from "..";
 
+const Table = () => {
   return (
     <table cellPadding="0" cellSpacing="0">
       <tbody>
@@ -13,7 +10,7 @@ const Table = () => {
               <tbody>
                 <tr>
                   <td className="title">
-                    <img src="cai_logo.svg" style={logoStyle} alt="logo" />
+                    <Logo />
                   </td>
 
                   <td>
