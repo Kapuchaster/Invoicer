@@ -1,16 +1,9 @@
-import { Companies, Flex, Header, Table } from "./components";
+import { Invoice } from "./Pages";
 
 import "./App.css";
 
 function App() {
-  return (
-    <>
-      <Table />
-      <div>--------------------------</div>
-      <Header />
-      <Companies />
-    </>
-  );
+  return <Invoice />;
 }
 
 export default App;
