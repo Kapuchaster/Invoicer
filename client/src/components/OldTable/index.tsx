@@ -1,6 +1,6 @@
 import { Logo } from "..";
 
-const Table = () => {
+const OldTable = () => {
   return (
     <table cellPadding="0" cellSpacing="0">
       <tbody>
@@ -78,4 +78,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default OldTable;

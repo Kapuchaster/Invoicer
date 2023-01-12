@@ -1,12 +1,13 @@
-import { Table, Header, Companies } from "../../components";
+import { Companies, Header, OldTable, Table } from "../../components";
 
 const Invoice = () => {
   return (
     <>
-      <Table />
+      <OldTable />
       <div>--------------------------</div>
       <Header />
       <Companies />
+      <Table />
     </>
   );
 };
