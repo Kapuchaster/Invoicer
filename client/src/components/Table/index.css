@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+  line-height: inherit;
+  text-align: left;
+}
+
+td,
+th {
+  padding: 5px;
+  vertical-align: top;
+}
+
+thead {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+}

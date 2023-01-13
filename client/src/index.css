@@ -25,10 +25,12 @@
   text-align: right;
 }
 
+/* to jest od row z logiem */
 .invoice-box table tr.top table td {
   padding-bottom: 20px;
 }
 
+/* To jest  ??*/
 .invoice-box table tr.top table td.title {
   font-size: 45px;
   line-height: 45px;
@@ -39,6 +41,7 @@
   margin-left: -40px;
 }
 
+/* To do info row  */
 .invoice-box table tr.information table td {
   padding-bottom: 40px;
 }

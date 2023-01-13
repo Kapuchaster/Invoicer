@@ -1,34 +1,42 @@
+import Body from "./Body";
+import Cell from "./Cell";
+import Header from "./Header";
+import Row from "./Row";
+
+import "./index.css";
+
 const Table = () => {
   return (
     <table cellPadding="0" cellSpacing="0">
-      <tbody>
-        <tr className="heading">
-          <td>Item</td>
-
-          <td>Price</td>
-        </tr>
-
-        <tr className="item last">
-          <td>Death Star</td>
-          <td>1100,39 EUR</td>
-        </tr>
-        <tr className="item last">
-          <td>Star destroyer</td>
-          <td>399,99 EUR</td>
-        </tr>
-
-        <tr className="total">
-          <td></td>
-
-          <td>Total: 1500,38 EUR</td>
-        </tr>
-        <tr className="vat">
-          <td></td>
-          <td>VAT (19%): 285,07 EUR</td>
-        </tr>
-      </tbody>
+      <Header>
+        <Row>
+          <Cell>Item</Cell>
+          <Cell>Price</Cell>
+        </Row>
+      </Header>
+      <Body>
+        <Row>
+          <Cell>Death Star</Cell>
+          <Cell>1100,39 EUR</Cell>
+        </Row>
+        <Row>
+          <Cell>Star destroyer</Cell>
+          <Cell>399,99 EUR</Cell>
+        </Row>
+        <Row>
+          <Cell>Total: 1500,38 EUR</Cell>
+        </Row>
+        <Row>
+          <Cell>VAT (19%): 285,07 EUR</Cell>
+        </Row>
+      </Body>
     </table>
   );
 };
+
+Table.Header = Header;
+Table.Body = Body;
+Table.Row = Row;
+Table.Cell = Cell;
 
 export default Table;

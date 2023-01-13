@@ -1,10 +1,10 @@
 import { Logo } from "..";
 
 /**
- * This component represents the Header of an invoice.
+ * This component represents the InvoiceHeader of an invoice.
  * It includes company logo and dates
  */
-const Header = () => {
+const InvoiceHeader = () => {
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <Logo />
@@ -17,4 +17,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default InvoiceHeader;
