@@ -6,3 +6,7 @@
 .container__logo {
   margin-left: -40px;
 }
+
+.container__data {
+  text-align: right;
+}

@@ -11,7 +11,7 @@ const Invoice = () => {
     <>
       <OldTable />
       <div>--------------------------</div>
-      <Header />
+      <Header invoiceId="1234" createdAt="2021-10-11" due="2021-10-11" />
       <Companies />
       <Table />
       <Summary />

@@ -1,25 +1,27 @@
 import { Logo } from "../../components";
 
+// TODO createdAt and due should be Dates
 interface Props {
   invoiceId: string;
-  createdAt: Date;
-  due: Date;
+  createdAt: string;
+  due: string;
 }
 
 /**
  * This component represents a header of an invoice.
  * It includes company logo and dates
  */
-const Header = () => {
+const Header = ({ invoiceId, createdAt, due }: Props) => {
+  // TODO Convert Date format!
   return (
     <section className="container">
       <div className="container__logo">
         <Logo />
       </div>
-      <div>
-        Invoice #: 39291 <br />
-        Created: 17/07/2021 <br />
-        Due: 17/08/2021
+      <div className="container__data">
+        <p>Invoice #: {invoiceId}</p>
+        <p>Created: {createdAt}</p>
+        <p>Due: {due}</p>
       </div>
     </section>
   );
