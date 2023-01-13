@@ -2,7 +2,7 @@
 * Update React to version 18
 * Add git hooks
 * Add Linting
-
+* Truncate Logo
 # To Clarify
 * Should there be a row line separator in a table?
 .invoice-box table tr.item td{

@@ -1,24 +1,27 @@
+interface Props {
+  company: string;
+  fullName: string;
+  email: string;
+}
+
 /**
  * This component represents companies of an invoice.
  * It includes details of the invoicing and receiving companies
  */
-const Companies = () => {
+const Companies = ({ company, fullName, email }: Props) => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <section className="container">
       <div>
-        collectAI GmbH.
-        <br />
-        20457 Hamburg
-        <br />
-        Hamburg, Germany
+        <p>collectAI GmbH.</p>
+        <p>20457 Hamburg</p>
+        <p>Hamburg, Germany</p>
       </div>
-      <div>
-        Acme, GmbH.
-        <br />
-        Bob Hans Jens, The Great <br />
-        youknowit@star-wars-is-real.pew
+      <div className="container__data">
+        <p>{company}</p>
+        <p>{fullName}</p>
+        <p>{email}</p>
       </div>
-    </div>
+    </section>
   );
 };
 

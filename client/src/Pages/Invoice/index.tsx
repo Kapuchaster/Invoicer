@@ -12,7 +12,11 @@ const Invoice = () => {
       <OldTable />
       <div>--------------------------</div>
       <Header invoiceId="1234" createdAt="2021-10-11" due="2021-10-11" />
-      <Companies />
+      <Companies
+        company="Acme, GmbH."
+        fullName="Bob Hans Jens, The Great"
+        email="youknowit@star-wars-is-real.pew"
+      />
       <Table />
       <Summary />
     </>
