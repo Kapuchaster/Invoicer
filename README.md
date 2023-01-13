@@ -12,3 +12,6 @@
 .invoice-box table tr.item.last td {
   border-bottom: none;
 }
+
+*BEM?
+*Atomic design?

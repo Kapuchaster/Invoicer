@@ -1,4 +1,4 @@
-import { Invoice } from "./Pages";
+import { Invoice } from "./pages";
 
 import "./App.css";
 

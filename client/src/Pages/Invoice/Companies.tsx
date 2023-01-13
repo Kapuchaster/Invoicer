@@ -1,7 +1,5 @@
-import { Logo } from "..";
-
 /**
- * This component represents the Companies of an invoice.
+ * This component represents companies of an invoice.
  * It includes details of the invoicing and receiving companies
  */
 const Companies = () => {

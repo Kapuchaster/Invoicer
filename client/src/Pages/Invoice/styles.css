@@ -1,0 +1,8 @@
+.container {
+  display: "flex";
+  justify-content: "space-between";
+}
+
+.container__logo {
+  margin-left: -40px;
+}
