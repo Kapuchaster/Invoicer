@@ -11,12 +11,12 @@ interface Props {
 const Companies = ({ company, fullName, email }: Props) => {
   return (
     <section className="container">
-      <div>
+      <div className="container__data--left">
         <p>collectAI GmbH.</p>
         <p>20457 Hamburg</p>
         <p>Hamburg, Germany</p>
       </div>
-      <div className="container__data">
+      <div className="container__data--right">
         <p>{company}</p>
         <p>{fullName}</p>
         <p>{email}</p>

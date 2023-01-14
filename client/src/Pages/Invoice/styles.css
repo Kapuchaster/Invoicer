@@ -1,12 +1,41 @@
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .container__logo {
+  /* TODO: Remove it after fitting the Logo */
   margin-left: -40px;
 }
 
-.container__data {
+.container__data--left {
+  text-align: left;
+}
+
+.container__data--right {
   text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .container__logo {
+    width: 100%;
+    text-align: center;
+    /* TODO: Remove it after fitting the Logo */
+    margin-left: auto;
+  }
+  .container__data {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container__data--left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container__data--right {
+    width: 100%;
+    text-align: center;
+  }
 }
