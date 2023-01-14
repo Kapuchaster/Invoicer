@@ -1,17 +1,26 @@
+import { Currency } from "../../types";
+
+interface Props {
+  total: number;
+  vatTotal: number;
+  vatRate: number;
+  currency: Currency;
+}
+
 /**
  * This component represents a summary of an invoice.
  * It includes total sum of prices and VAT row.
  */
-const Summary = () => {
+const Summary = ({ total, vatTotal, vatRate, currency }: Props) => {
   return (
-    <>
-      <div>
-        <div>Total: 1500,38 EUR</div>
-      </div>
-      <div>
-        <div>VAT (19%): 285,07 EUR</div>
-      </div>
-    </>
+    <section style={{ textAlign: "right" }}>
+      <p style={{ fontWeight: "bold" }}>
+        Total: {total} {currency}
+      </p>
+      <p>
+        VAT ({vatRate}%): {vatTotal} {currency}
+      </p>
+    </section>
   );
 };
 

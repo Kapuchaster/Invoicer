@@ -18,7 +18,7 @@ const Header = ({ invoiceId, createdAt, due }: Props) => {
       <div className="container__logo">
         <Logo />
       </div>
-      <div className="container__data">
+      <div className="container__data--right">
         <p>Invoice #: {invoiceId}</p>
         <p>Created: {createdAt}</p>
         <p>Due: {due}</p>
