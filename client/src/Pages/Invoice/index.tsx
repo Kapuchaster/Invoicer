@@ -1,11 +1,12 @@
 import { OldTable } from "../../components";
+import { Currency } from "../../types";
 import Companies from "./Companies";
 import Header from "./Header";
 import Summary from "./Summary";
 import Table from "./Table";
 
 import "./styles.css";
-import { Currency } from "../../types";
+import Separator from "../../components/Separator";
 
 const VAT = 19;
 
@@ -27,6 +28,7 @@ const Invoice = () => {
       <div style={{ marginTop: "3.5rem" }}>
         <Table />
       </div>
+      <Separator />
       <Summary
         total={1500.38}
         vatTotal={285.07}
