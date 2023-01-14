@@ -1,4 +1,5 @@
 import { OldTable } from "../../components";
+import Separator from "../../components/Separator";
 import { Currency } from "../../types";
 import Companies from "./Companies";
 import Header from "./Header";
@@ -6,7 +7,6 @@ import Summary from "./Summary";
 import Table from "./Table";
 
 import "./styles.css";
-import Separator from "../../components/Separator";
 
 const VAT = 19;
 
