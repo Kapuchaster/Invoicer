@@ -1,8 +1,11 @@
+# How to
+* TODO: describe scripts here
 # TODO
 * Update React to version 18
 * Add git hooks
 * Add Linting
 * Truncate Logo
+* Add Eslint
 # To Clarify
 * Should there be a row line separator in a table?
 .invoice-box table tr.item td{
