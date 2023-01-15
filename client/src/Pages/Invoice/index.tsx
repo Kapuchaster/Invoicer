@@ -1,5 +1,6 @@
 import { OldTable } from "../../components";
 import Separator from "../../components/Separator";
+import { useGetInvoice } from "../../hooks/useGetInvoice";
 import { Currency } from "../../types";
 import Companies from "./Companies";
 import Header from "./Header";
@@ -8,9 +9,13 @@ import Table from "./Table";
 
 import "./styles.css";
 
+//TODO move it to config file
 const VAT = 19;
 
 const Invoice = () => {
+  const { data, loading, error } = useGetInvoice();
+  console.log(data, loading, error);
+
   return (
     <>
       <OldTable />
