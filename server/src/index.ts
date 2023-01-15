@@ -1,7 +1,8 @@
+import cors from "cors";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
-import { buildSchema } from "graphql";
 import fs from "fs";
+import { buildSchema } from "graphql";
 import path from "path";
 
 const rawInvoice = fs.readFileSync(
@@ -42,6 +43,8 @@ const root = {
 };
 
 const app = express();
+
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({
