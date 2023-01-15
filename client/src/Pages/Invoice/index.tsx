@@ -17,7 +17,7 @@ const Invoice = () => {
       <div>----------------------------------------------------</div>
       <div style={{ padding: "0 0.625rem" }}>
         <Header invoiceId="1234" createdAt="2021-10-11" due="2021-10-11" />
-        <div style={{ marginTop: "2rem" }}>
+        <div className="invoice__companies--container">
           <Companies
             company="Acme, GmbH."
             fullName="Bob Hans Jens, The Great"
@@ -25,7 +25,7 @@ const Invoice = () => {
           />
         </div>
       </div>
-      <div style={{ marginTop: "3.5rem" }}>
+      <div className="invoice__table--container">
         <Table />
       </div>
       <Separator />

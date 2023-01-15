@@ -9,33 +9,49 @@
   margin-left: -40px;
 }
 
-.container__data--left {
+.container__block--left {
   text-align: left;
 }
 
-.container__data--right {
+.container__block--right {
   text-align: right;
 }
 
+.invoice__companies--container {
+  margin-top: 2.5rem;
+}
+
+.invoice__table--container {
+  margin-top: 3rem;
+}
+
 @media only screen and (max-width: 600px) {
+  .invoice__companies--container {
+    margin-top: 2.5rem;
+  }
+
   .container__logo {
     width: 100%;
     text-align: center;
     /* TODO: Remove it after fitting the Logo */
     margin-left: auto;
   }
-  .container__data {
+
+  .container__block {
     width: 100%;
+  }
+
+  .container__block--left {
     text-align: center;
   }
 
-  .container__data--left {
-    width: 100%;
+  .container__block--right {
     text-align: center;
+    margin-top: 2.5rem;
   }
 
-  .container__data--right {
-    width: 100%;
+  .container__block--right {
     text-align: center;
+    margin-top: 1.5625rem;
   }
 }

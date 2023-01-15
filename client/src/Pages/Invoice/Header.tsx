@@ -15,10 +15,10 @@ const Header = ({ invoiceId, createdAt, due }: Props) => {
   // TODO Convert Date format!
   return (
     <section className="container">
-      <div className="container__logo">
+      <div className="container__block container__block--left container__logo">
         <Logo />
       </div>
-      <div className="container__data--right">
+      <div className="container__block container__block--right">
         <p>Invoice #: {invoiceId}</p>
         <p>Created: {createdAt}</p>
         <p>Due: {due}</p>

@@ -10,8 +10,11 @@ th {
   vertical-align: top;
 }
 
+th {
+  border-bottom: 0.0625rem solid #ddd;
+}
+
 thead {
   background: #eee;
-  border-bottom: 1px solid #ddd;
   font-weight: bold;
 }

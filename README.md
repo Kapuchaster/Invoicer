@@ -15,3 +15,4 @@
 
 *BEM?
 *Atomic design?
+*Should Logo be shifted left at small screen?

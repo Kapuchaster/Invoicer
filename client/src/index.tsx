@@ -8,6 +8,7 @@ import "./index.css";
 ReactDOM.render(
   <StrictMode>
     <App />
+    <div style={{marginTop: '800px'}}></div>
   </StrictMode>,
   document.getElementById("invoice")
 );
