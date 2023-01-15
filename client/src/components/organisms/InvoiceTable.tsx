@@ -1,9 +1,9 @@
-import { Table } from "../../components";
+import Table from "../molecules/table";
 
 /**
  * This component represents a table of invoice records.
  */
-const InvoiceHeader = () => (
+const InvoiceTable = () => (
   <Table>
     <Table.Header>
       <Table.Row>
@@ -26,4 +26,4 @@ const InvoiceHeader = () => (
   </Table>
 );
 
-export default InvoiceHeader;
+export default InvoiceTable;

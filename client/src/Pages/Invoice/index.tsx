@@ -1,13 +1,15 @@
-import { OldTable } from "../../components";
-import Separator from "../../components/Separator";
+import { Invoice as InvoiceTemplate, OldTable } from "../../components";
 import { useGetInvoice } from "../../hooks/useGetInvoice";
-import { Currency } from "../../types";
-import Companies from "./Companies";
-import Header from "./Header";
-import Summary from "./Summary";
-import Table from "./Table";
 
-import "./styles.css";
+type InvoiceType = {
+  id: string;
+  email: string;
+  fullName: string;
+  company: string;
+  createdAt: string;
+  dueAt: string;
+  lineItems: { description: string; price: string }[];
+};
 
 //TODO move it to config file
 const VAT = 19;
@@ -20,26 +22,7 @@ const Invoice = () => {
     <>
       <OldTable />
       <div>----------------------------------------------------</div>
-      <div style={{ padding: "0 0.625rem" }}>
-        <Header invoiceId="1234" createdAt="2021-10-11" due="2021-10-11" />
-        <div className="invoice__companies--container">
-          <Companies
-            company="Acme, GmbH."
-            fullName="Bob Hans Jens, The Great"
-            email="youknowit@star-wars-is-real.pew"
-          />
-        </div>
-      </div>
-      <div className="invoice__table--container">
-        <Table />
-      </div>
-      <Separator />
-      <Summary
-        total={1500.38}
-        vatTotal={285.07}
-        vatRate={VAT}
-        currency={Currency.Euro}
-      />
+      <InvoiceTemplate />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { Logo } from "../../components";
+import { Logo } from "../..";
 
 // TODO createdAt and due should be Dates
 interface Props {
