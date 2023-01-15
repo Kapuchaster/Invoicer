@@ -6,6 +6,8 @@
 * Add Linting
 * Truncate Logo
 * Add Eslint
+* Create envs
+  
 # To Clarify
 * Should there be a row line separator in a table?
 .invoice-box table tr.item td{
