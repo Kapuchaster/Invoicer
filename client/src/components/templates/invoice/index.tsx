@@ -27,7 +27,7 @@ const Invoice = ({
       </div>
     </div>
     <div className="invoice__table--container">
-      <InvoiceTable />
+      <InvoiceTable lineItems={lineItems} />
     </div>
     <Separator />
     <Summary
