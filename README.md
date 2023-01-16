@@ -7,6 +7,7 @@
 * Truncate Logo
 * Add Eslint
 * Create envs
+* convert all px to rem
   
 # To Clarify
 * Should there be a row line separator in a table?

@@ -18,3 +18,8 @@ thead {
   background: #eee;
   font-weight: bold;
 }
+
+.clickable:hover {
+  cursor: pointer;
+  background: #ddd;
+}

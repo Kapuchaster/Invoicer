@@ -22,7 +22,7 @@ const InvoiceTable = ({ lineItems, currency }: Props) => (
     <Table.Body>
       {lineItems.map((lineItem) => (
         // key should be a lineItem Id, but it's not provided
-        <Table.Row key={lineItem.description}>
+        <Table.Row onClick={() => {}} key={lineItem.description}>
           <Table.Cell>{lineItem.description}</Table.Cell>
           <Table.Cell
             alignRight

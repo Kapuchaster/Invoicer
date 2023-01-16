@@ -1,9 +1,10 @@
 interface Props {
+  onClick?: () => void;
   children: JSX.Element | JSX.Element[];
 }
 
-const Row = ({ children }: Props) => {
-  return <tr>{children}</tr>;
+const Row = ({ onClick, children }: Props) => {
+  return <tr className={onClick ? "clickable" : ""}>{children}</tr>;
 };
 
 export default Row;
