@@ -19,6 +19,19 @@ const Invoice = ({ invoice }: Props) => {
    */
   const [lineItems, setLineItems] = useState(invoice.lineItems);
 
+  const editLineItem = (
+    lineItemIndex: number,
+    description: string,
+    price: number
+  ) => {
+    const newLineItems = [...lineItems];
+    newLineItems[lineItemIndex] = {
+      description,
+      price,
+    };
+    setLineItems(newLineItems);
+  };
+
   // This function will open modal and edit line item of the given index
   // NOTE: The edition should NOT be based on index, rather line item id (but it is not provided)
   const handleRowSelect = (lineItemIndex: number) => {
@@ -28,12 +41,7 @@ const Invoice = ({ invoice }: Props) => {
         description={description}
         price={price}
         onChange={(newDescription, newPrice) => {
-          const newLineItems = [...lineItems];
-          newLineItems[lineItemIndex] = {
-            description: newDescription,
-            price: newPrice,
-          };
-          setLineItems(newLineItems);
+          editLineItem(lineItemIndex, newDescription, newPrice);
           modalContext.close();
         }}
       />
