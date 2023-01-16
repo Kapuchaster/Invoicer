@@ -27,7 +27,7 @@ const Invoice = ({
       </div>
     </div>
     <div className="invoice__table--container">
-      <InvoiceTable lineItems={lineItems} />
+      <InvoiceTable lineItems={lineItems} currency={Currency.Euro} />
     </div>
     <Separator />
     <Summary

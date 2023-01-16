@@ -1,14 +1,15 @@
-import { InvoiceType } from "../../types";
+import { Currency, InvoiceType } from "../../types";
 import Table from "../molecules/table";
 
 interface Props {
   lineItems: InvoiceType["lineItems"];
+  currency: Currency;
 }
 
 /**
  * This component represents a table of invoice records.
  */
-const InvoiceTable = ({ lineItems }: Props) => (
+const InvoiceTable = ({ lineItems, currency }: Props) => (
   <Table>
     <Table.Header>
       <Table.Row>
@@ -26,7 +27,7 @@ const InvoiceTable = ({ lineItems }: Props) => (
           <Table.Cell
             alignRight
             disableTextBreak
-          >{`${lineItem.price} EUR`}</Table.Cell>
+          >{`${lineItem.price} ${currency}`}</Table.Cell>
         </Table.Row>
       ))}
     </Table.Body>
