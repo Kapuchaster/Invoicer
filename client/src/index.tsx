@@ -1,14 +1,16 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { WithModalContext } from "./HOC/WithModal";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 
 ReactDOM.render(
   <StrictMode>
-    <App />
-    <div style={{marginTop: '800px'}}></div>
+    <WithModalContext>
+      <App />
+    </WithModalContext>
   </StrictMode>,
   document.getElementById("invoice")
 );

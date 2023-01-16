@@ -4,7 +4,11 @@ interface Props {
 }
 
 const Row = ({ onClick, children }: Props) => {
-  return <tr className={onClick ? "clickable" : ""}>{children}</tr>;
+  return (
+    <tr onClick={onClick} className={onClick ? "clickable" : ""}>
+      {children}
+    </tr>
+  );
 };
 
 export default Row;

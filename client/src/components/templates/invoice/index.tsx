@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { ModalContext } from "../../../HOC/WithModal";
 import { Currency, InvoiceType } from "../../../types";
 import Separator from "../../atoms/separator";
 import Companies from "../../organisms/companies";
@@ -19,12 +21,20 @@ const Invoice = ({
   dueAt,
   lineItems,
 }: InvoiceType) => {
+  const modalContext = useContext(ModalContext);
+
   const total = lineItems.reduce(
     (total, lineItem) => lineItem.price + total,
     0
   );
 
   const vatTotal = +((total * VAT) / 100).toFixed(2);
+
+  // This function will open modal and edit line item of the given index
+  // NOTE: The edition should NOT be based on index, rather line item id (but it is not provided)
+  const handleRowSelect = (lineItemIndex: number) => {
+    modalContext.open(<div>{lineItems[lineItemIndex].description}</div>);
+  };
 
   return (
     <>
@@ -35,7 +45,11 @@ const Invoice = ({
         </div>
       </div>
       <div className="invoice__table--container">
-        <InvoiceTable lineItems={lineItems} currency={Currency.Euro} />
+        <InvoiceTable
+          lineItems={lineItems}
+          currency={Currency.Euro}
+          onRowSelect={handleRowSelect}
+        />
       </div>
       <div style={{ width: "66%", marginLeft: "auto" }}>
         <Separator />
