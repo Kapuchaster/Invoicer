@@ -29,7 +29,9 @@ const Invoice = ({
     <div className="invoice__table--container">
       <InvoiceTable lineItems={lineItems} currency={Currency.Euro} />
     </div>
-    <Separator />
+    <div style={{ width: "66%", marginLeft: "auto" }}>
+      <Separator />
+    </div>
     <Summary
       total={1500.38}
       vatTotal={285.07}
