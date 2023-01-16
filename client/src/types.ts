@@ -9,5 +9,5 @@ export type InvoiceType = {
   company: string;
   createdAt: string;
   dueAt: string;
-  lineItems: { description: string; price: string }[];
+  lineItems: { description: string; price: number }[];
 };

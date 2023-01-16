@@ -18,27 +18,36 @@ const Invoice = ({
   createdAt,
   dueAt,
   lineItems,
-}: InvoiceType) => (
-  <>
-    <div style={{ padding: "0 0.625rem" }}>
-      <Header invoiceId={id} createdAt={createdAt} dueAt={dueAt} />
-      <div className="invoice__companies--container">
-        <Companies company={company} fullName={fullName} email={email} />
+}: InvoiceType) => {
+  const total = lineItems.reduce(
+    (total, lineItem) => lineItem.price + total,
+    0
+  );
+
+  const vatTotal = +((total * VAT) / 100).toFixed(2);
+
+  return (
+    <>
+      <div style={{ padding: "0 0.625rem" }}>
+        <Header invoiceId={id} createdAt={createdAt} dueAt={dueAt} />
+        <div className="invoice__companies--container">
+          <Companies company={company} fullName={fullName} email={email} />
+        </div>
       </div>
-    </div>
-    <div className="invoice__table--container">
-      <InvoiceTable lineItems={lineItems} currency={Currency.Euro} />
-    </div>
-    <div style={{ width: "66%", marginLeft: "auto" }}>
-      <Separator />
-    </div>
-    <Summary
-      total={1500.38}
-      vatTotal={285.07}
-      vatRate={VAT}
-      currency={Currency.Euro}
-    />
-  </>
-);
+      <div className="invoice__table--container">
+        <InvoiceTable lineItems={lineItems} currency={Currency.Euro} />
+      </div>
+      <div style={{ width: "66%", marginLeft: "auto" }}>
+        <Separator />
+      </div>
+      <Summary
+        total={total}
+        vatTotal={vatTotal}
+        vatRate={VAT}
+        currency={Currency.Euro}
+      />
+    </>
+  );
+};
 
 export default Invoice;
