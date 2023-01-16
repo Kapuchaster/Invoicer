@@ -1,0 +1,19 @@
+form {
+  background-color: white;
+  padding: 1rem;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+label input {
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.form__field--container {
+  padding: 1rem;
+}

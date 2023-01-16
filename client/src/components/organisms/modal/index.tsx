@@ -25,19 +25,7 @@ const ModalComponent = ({ content, onClose }: Props) => {
       className="Modal"
       overlayClassName="Overlay"
     >
-      <div>
-        <div
-          style={{
-            position: "absolute",
-            right: "0",
-            top: "0",
-            zIndex: "99999",
-          }}
-        >
-          <button onClick={closeModal}>X</button>
-        </div>
-        {content}
-      </div>
+      <div>{content}</div>
     </Modal>
   );
 };

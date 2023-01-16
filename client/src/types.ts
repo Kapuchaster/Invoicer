@@ -2,6 +2,8 @@ export enum Currency {
   Euro = "EUR",
 }
 
+export type LineItem = { description: string; price: number };
+
 export type InvoiceType = {
   id: string;
   email: string;
@@ -9,5 +11,5 @@ export type InvoiceType = {
   company: string;
   createdAt: string;
   dueAt: string;
-  lineItems: { description: string; price: number }[];
+  lineItems: LineItem[];
 };

@@ -1,25 +1,49 @@
+import { useContext, useState } from "react";
 import { Invoice as InvoiceTemplate } from "../../components";
-import { useGetInvoice } from "../../hooks/useGetInvoice";
+import LineItemEditForm from "../../components/organisms/lineItemEditForm";
+import { ModalContext } from "../../HOC/WithModal";
+import { InvoiceType } from "../../types";
 
-//TODO move it to config file
-const VAT = 19;
+interface Props {
+  invoice: InvoiceType;
+}
 
-const Invoice = () => {
-  const { data, loading, error } = useGetInvoice();
+const Invoice = ({ invoice }: Props) => {
+  const modalContext = useContext(ModalContext);
 
-  if (loading) return <p>Loading</p>;
-  if (error) return <p>Data Error</p>;
-  if (!data) return <p>No Data</p>;
+  /**
+   * This is very basic idea of editing lineItems.
+   * A better solution could be to load incoming data in a Store
+   * and edit them with actions, however it would be too heave for such
+   * a simple App
+   */
+  const [lineItems, setLineItems] = useState(invoice.lineItems);
+
+  // This function will open modal and edit line item of the given index
+  // NOTE: The edition should NOT be based on index, rather line item id (but it is not provided)
+  const handleRowSelect = (lineItemIndex: number) => {
+    const { description, price } = lineItems[lineItemIndex];
+    modalContext.open(
+      <LineItemEditForm
+        description={description}
+        price={price}
+        onChange={(newDescription, newPrice) => {
+          const newLineItems = [...lineItems];
+          newLineItems[lineItemIndex] = {
+            description: newDescription,
+            price: newPrice,
+          };
+          setLineItems(newLineItems);
+          modalContext.close();
+        }}
+      />
+    );
+  };
 
   return (
     <InvoiceTemplate
-      id={data.invoice.id}
-      email={data.invoice.email}
-      fullName={data.invoice.fullName}
-      company={data.invoice.company}
-      createdAt={data.invoice.createdAt}
-      dueAt={data.invoice.dueAt}
-      lineItems={data.invoice.lineItems}
+      invoice={{ ...invoice, lineItems: lineItems }}
+      onRowSelect={handleRowSelect}
     />
   );
 };
