@@ -4,14 +4,14 @@ import { Logo } from "../..";
 interface Props {
   invoiceId: string;
   createdAt: string;
-  due: string;
+  dueAt: string;
 }
 
 /**
  * This component represents a header of an invoice.
  * It includes company logo and dates
  */
-const Header = ({ invoiceId, createdAt, due }: Props) => {
+const Header = ({ invoiceId, createdAt, dueAt }: Props) => {
   // TODO Convert Date format!
   return (
     <section className="container">
@@ -21,7 +21,7 @@ const Header = ({ invoiceId, createdAt, due }: Props) => {
       <div className="container__block container__block--right">
         <p>Invoice #: {invoiceId}</p>
         <p>Created: {createdAt}</p>
-        <p>Due: {due}</p>
+        <p>Due: {dueAt}</p>
       </div>
     </section>
   );

@@ -1,29 +1,26 @@
-import { Invoice as InvoiceTemplate, OldTable } from "../../components";
+import { Invoice as InvoiceTemplate } from "../../components";
 import { useGetInvoice } from "../../hooks/useGetInvoice";
-
-type InvoiceType = {
-  id: string;
-  email: string;
-  fullName: string;
-  company: string;
-  createdAt: string;
-  dueAt: string;
-  lineItems: { description: string; price: string }[];
-};
 
 //TODO move it to config file
 const VAT = 19;
 
 const Invoice = () => {
   const { data, loading, error } = useGetInvoice();
-  console.log(data, loading, error);
+
+  if (loading) return <p>Loading</p>;
+  if (error) return <p>Data Error</p>;
+  if (!data) return <p>No Data</p>;
 
   return (
-    <>
-      <OldTable />
-      <div>----------------------------------------------------</div>
-      <InvoiceTemplate />
-    </>
+    <InvoiceTemplate
+      id={data.invoice.id}
+      email={data.invoice.email}
+      fullName={data.invoice.fullName}
+      company={data.invoice.company}
+      createdAt={data.invoice.createdAt}
+      dueAt={data.invoice.dueAt}
+      lineItems={data.invoice.lineItems}
+    />
   );
 };
 

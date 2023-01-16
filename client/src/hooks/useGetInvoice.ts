@@ -1,3 +1,4 @@
+import { InvoiceType } from "../types";
 import { useRequestStatus } from "./useRequestStatus";
 
 const invoiceQuery = `query GetInvoice { invoice 
@@ -15,5 +16,5 @@ const invoiceQuery = `query GetInvoice { invoice
 }`;
 
 export const useGetInvoice = () => {
-  return useRequestStatus(invoiceQuery);
+  return useRequestStatus<{ invoice: InvoiceType }>(invoiceQuery);
 };

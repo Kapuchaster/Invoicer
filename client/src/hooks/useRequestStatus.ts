@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import RestClient from "../services/restClient";
 
-export const useRequestStatus = (query: string, variables?: JSON) => {
-  const [data, setData] = useState<any>();
+export const useRequestStatus = <T>(query: string, variables?: JSON) => {
+  const [data, setData] = useState<T>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
     RestClient.post(query, variables)
-      .then((response) => {
-        setData(response);
+      .then((response) => response.json())
+      .then((json) => {
+        setData(json.data);
         setError(false);
       })
       .catch((e) => {
