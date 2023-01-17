@@ -5,7 +5,7 @@ import config from "../../config.json";
 import { ModalContext } from "../../HOC/withModal";
 import { InvoiceType, LineItem } from "../../types";
 
-interface Props {
+export interface Props {
   invoice: InvoiceType;
 }
 

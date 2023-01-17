@@ -25,6 +25,11 @@ The application can be adapted to each company via the **client/src/config.json*
 *npm run start
 *(optional) npm run build and deploy on a server
 
+# Testing
+*Go to server directory and provide the following command in a terminal
+*npm i
+*npm run test
+
 # TODO
 * Update React to version 18
 * Add git hooks
@@ -33,7 +38,7 @@ The application can be adapted to each company via the **client/src/config.json*
 * Share types between BE and FE
 * Error Handling
 * LineItems should have ids
-
+* Add more tests
 # Author
 Michał Kapuściński (kapuchaster@gmail.com)
 

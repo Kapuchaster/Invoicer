@@ -32,7 +32,7 @@ const Invoice = ({
 
   return (
     <>
-      <div style={{ padding: "0 0.625rem" }}>
+      <div style={{ padding: "0.625rem" }}>
         <InvoiceHeader
           invoiceId={id}
           createdAt={createdAt}
