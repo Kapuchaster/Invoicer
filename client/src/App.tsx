@@ -7,8 +7,6 @@ import { Invoice } from "./pages";
 import isInvoiceType from "./services/validator";
 import { InvoiceType } from "./types";
 
-import "./App.css";
-
 const App = () => {
   const { data, loading, error } = useGetInvoice();
   const [invoice, setInvoice] = useState<InvoiceType>();
