@@ -4,12 +4,13 @@ export { default as Separator } from "./atoms/separator";
 
 // Molecules
 export { default as Table } from "./molecules/table";
+export { default as ResponsiveRow } from "./molecules/responsiveRow";
 
 // Organisms
-export { default as Header } from "./organisms/header";
-export { default as Companies } from "./organisms/companies";
-export { default as InvoiceTable } from "./organisms/InvoiceTable";
-export { default as Summary } from "./organisms/summary";
+export { default as InvoiceHeader } from "./organisms/invoiceHeader";
+export { default as InvoiceCompanies } from "./organisms/invoiceCompanies";
+export { default as InvoiceTable } from "./organisms/invoiceTable/InvoiceTable";
+export { default as InvoiceSummary } from "./organisms/invoiceSummary";
 
 // Templates
 export { default as Invoice } from "./templates/invoice";

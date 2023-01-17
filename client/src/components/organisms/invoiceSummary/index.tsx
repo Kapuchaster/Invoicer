@@ -11,7 +11,7 @@ interface Props {
  * This component represents a summary of an invoice.
  * It includes total sum of prices and VAT row.
  */
-const Summary = ({ total, vatTotal, vatRate, currency }: Props) => {
+const InvoiceSummary = ({ total, vatTotal, vatRate, currency }: Props) => {
   return (
     <section className="summary">
       <p className="summary__total">
@@ -24,4 +24,4 @@ const Summary = ({ total, vatTotal, vatRate, currency }: Props) => {
   );
 };
 
-export default Summary;
+export default InvoiceSummary;

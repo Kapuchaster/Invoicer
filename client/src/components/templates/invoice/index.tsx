@@ -1,9 +1,11 @@
+import {
+  InvoiceCompanies,
+  InvoiceHeader,
+  InvoiceSummary,
+  InvoiceTable,
+} from "../..";
 import { Invoicee, InvoiceType } from "../../../types";
 import Separator from "../../atoms/separator";
-import Companies from "../../organisms/companies";
-import Header from "../../organisms/header";
-import InvoiceTable from "../../organisms/InvoiceTable";
-import Summary from "../../organisms/summary";
 
 import "./styles.css";
 
@@ -31,14 +33,14 @@ const Invoice = ({
   return (
     <>
       <div style={{ padding: "0 0.625rem" }}>
-        <Header
+        <InvoiceHeader
           invoiceId={id}
           createdAt={createdAt}
           dueAt={dueAt}
           logoSrc={invoicee.logo}
         />
         <div className="invoice__companies">
-          <Companies
+          <InvoiceCompanies
             company={company}
             fullName={fullName}
             email={email}
@@ -56,7 +58,7 @@ const Invoice = ({
       <div style={{ width: "66%", marginLeft: "auto" }}>
         <Separator />
       </div>
-      <Summary
+      <InvoiceSummary
         total={total}
         vatTotal={vatTotal}
         vatRate={vatRate}

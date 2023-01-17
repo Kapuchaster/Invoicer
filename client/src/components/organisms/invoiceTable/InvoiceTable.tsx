@@ -1,5 +1,5 @@
-import { InvoiceType } from "../../types";
-import Table from "../molecules/table";
+import { InvoiceType } from "../../../types";
+import Table from "../../molecules/table";
 
 interface Props {
   lineItems: InvoiceType["lineItems"];

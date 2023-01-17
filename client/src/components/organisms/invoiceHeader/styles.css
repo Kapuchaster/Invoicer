@@ -1,0 +1,13 @@
+.header__logo {
+  /* TODO: Remove it after fitting the Logo */
+  margin-left: -40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header__logo {
+    width: 100%;
+    text-align: center;
+    /* TODO: Remove it after fitting the Logo */
+    margin-left: auto;
+  }
+}
