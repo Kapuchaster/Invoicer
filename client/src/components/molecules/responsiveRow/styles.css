@@ -1,0 +1,33 @@
+.responsive-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.responsive-row__block--left {
+  text-align: left;
+}
+
+.responsive-row__block--right {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-row__block {
+    width: 100%;
+  }
+
+  .responsive-row__block--left {
+    text-align: center;
+  }
+
+  .responsive-row__block--right {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .responsive-row__block--right {
+    text-align: center;
+    margin-top: 1.5625rem;
+  }
+}
