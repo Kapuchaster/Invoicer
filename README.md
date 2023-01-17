@@ -1,26 +1,40 @@
 # Description
-TODO
-# How to
-* TODO: describe scripts here
+This is an application for generating invoices. Invoices can be loaded from the server and as directly from the computer thanks to the drag'n'drop function.
+The application can be adapted to each company via the **client/src/config.json** file.
+
+# Technology
+##Frontend
+*React 17
+*CSS styling with BEM styling and Atomic design methodology
+
+##Backend
+*Node
+*Express
+*GraphQL
+
+# Running the App
+## Server
+*Go to server directory and provide the following command in a terminal
+*npm i
+*npm run build
+*npm run start
+
+## Client
+*Go to server directory and provide the following command in a terminal
+*npm i
+*npm run start
+*(optional) npm run build and deploy on a server
+
 # TODO
 * Update React to version 18
 * Add git hooks
-* Add Linting
 * Truncate Logo
 * Add Eslint
-* Create envs
-  
-# To Clarify
-* Should there be a row line separator in a table?
-.invoice-box table tr.item td{
-  border-bottom: 1px solid rgb(141, 49, 49);
-}
+* Share types between BE and FE
+* Error Handling
+* LineItems should have ids
 
-.invoice-box table tr.item.last td {
-  border-bottom: none;
-}
+# Author
+Michał Kapuściński (kapuchaster@gmail.com)
 
-*BEM?
-*Atomic design?
-*Should Logo be shifted left at small screen?
-*lineItems do not have ids!
+_If you have aby suggestion fell free to contact me_
