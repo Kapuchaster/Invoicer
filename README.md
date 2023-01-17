@@ -3,11 +3,11 @@ This is an application for generating invoices. Invoices can be loaded from the 
 The application can be adapted to each company via the **client/src/config.json** file.
 
 # Technology
-##Frontend
+## Frontend
 *React 17
 *CSS styling with BEM styling and Atomic design methodology
 
-##Backend
+## Backend
 *Node
 *Express
 *GraphQL
