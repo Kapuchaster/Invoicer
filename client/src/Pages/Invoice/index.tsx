@@ -3,6 +3,7 @@ import { Invoice as InvoiceTemplate } from "../../components";
 import LineItemEditForm from "../../components/organisms/lineItemEditForm";
 import { ModalContext } from "../../HOC/WithModal";
 import { InvoiceType, LineItem } from "../../types";
+import config from "../../config.json";
 
 interface Props {
   invoice: InvoiceType;
@@ -54,7 +55,10 @@ const Invoice = ({ invoice }: Props) => {
 
   return (
     <InvoiceTemplate
+      invoicee={config.invoicee}
       invoice={{ ...invoice, lineItems: lineItems }}
+      vatRate={config.vatRate}
+      currency={config.currency}
       onRowSelect={handleRowSelect}
     />
   );

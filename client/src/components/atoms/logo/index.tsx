@@ -1,10 +1,14 @@
-const Logo = () => {
+interface Props {
+  src: string;
+}
+
+const Logo = ({ src }: Props) => {
   const logoStyle = {
     width: "100%",
     maxWidth: "300px",
   };
 
-  return <img src="cai_logo.svg" style={logoStyle} alt="logo" />;
+  return <img src={src} style={logoStyle} alt="logo" />;
 };
 
 export default Logo;

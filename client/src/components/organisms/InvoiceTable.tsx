@@ -1,9 +1,9 @@
-import { Currency, InvoiceType } from "../../types";
+import { InvoiceType } from "../../types";
 import Table from "../molecules/table";
 
 interface Props {
   lineItems: InvoiceType["lineItems"];
-  currency: Currency;
+  currency: string;
   onRowSelect: (index: number) => void;
 }
 

@@ -1,6 +1,9 @@
-export enum Currency {
-  Euro = "EUR",
-}
+export type Invoicee = {
+  name: string;
+  address: string;
+  city: string;
+  logo: string;
+};
 
 export type LineItem = { description: string; price: number };
 

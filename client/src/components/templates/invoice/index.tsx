@@ -1,4 +1,4 @@
-import { Currency, InvoiceType } from "../../../types";
+import { Invoicee, InvoiceType } from "../../../types";
 import Separator from "../../atoms/separator";
 import Companies from "../../organisms/companies";
 import Header from "../../organisms/header";
@@ -7,33 +7,49 @@ import Summary from "../../organisms/summary";
 
 import "./styles.css";
 
-//TODO move it to config file
-const VAT = 19;
-
 interface Props {
+  invoicee: Invoicee;
   invoice: InvoiceType;
+  vatRate: number;
+  currency: string;
   onRowSelect: (index: number) => void;
 }
 
-const Invoice = ({ invoice, onRowSelect }: Props) => {
+const Invoice = ({
+  invoice,
+  invoicee,
+  vatRate,
+  currency,
+  onRowSelect,
+}: Props) => {
   const { id, createdAt, dueAt, company, fullName, email, lineItems } = invoice;
   const total = +invoice.lineItems
     .reduce((total, lineItem) => lineItem.price + total, 0)
     .toFixed(2);
-  const vatTotal = +((total * VAT) / 100).toFixed(2);
+  const vatTotal = +((total * vatRate) / 100).toFixed(2);
 
   return (
     <>
       <div style={{ padding: "0 0.625rem" }}>
-        <Header invoiceId={id} createdAt={createdAt} dueAt={dueAt} />
+        <Header
+          invoiceId={id}
+          createdAt={createdAt}
+          dueAt={dueAt}
+          logoSrc={invoicee.logo}
+        />
         <div className="invoice__companies--container">
-          <Companies company={company} fullName={fullName} email={email} />
+          <Companies
+            company={company}
+            fullName={fullName}
+            email={email}
+            invoicee={invoicee}
+          />
         </div>
       </div>
       <div className="invoice__table--container">
         <InvoiceTable
           lineItems={lineItems}
-          currency={Currency.Euro}
+          currency={currency}
           onRowSelect={onRowSelect}
         />
       </div>
@@ -43,8 +59,8 @@ const Invoice = ({ invoice, onRowSelect }: Props) => {
       <Summary
         total={total}
         vatTotal={vatTotal}
-        vatRate={VAT}
-        currency={Currency.Euro}
+        vatRate={vatRate}
+        currency={currency}
       />
     </>
   );

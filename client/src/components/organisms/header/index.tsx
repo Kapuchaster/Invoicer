@@ -5,18 +5,19 @@ interface Props {
   invoiceId: string;
   createdAt: string;
   dueAt: string;
+  logoSrc: string;
 }
 
 /**
  * This component represents a header of an invoice.
  * It includes company logo and dates
  */
-const Header = ({ invoiceId, createdAt, dueAt }: Props) => {
+const Header = ({ invoiceId, createdAt, dueAt, logoSrc }: Props) => {
   // TODO Convert Date format!
   return (
     <section className="container">
       <div className="container__block container__block--left container__logo">
-        <Logo />
+        <Logo src={logoSrc} />
       </div>
       <div className="container__block container__block--right">
         <p>Invoice #: {invoiceId}</p>

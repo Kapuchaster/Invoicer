@@ -1,10 +1,8 @@
-import { Currency } from "../../../types";
-
 interface Props {
   total: number;
   vatTotal: number;
   vatRate: number;
-  currency: Currency;
+  currency: string;
 }
 
 /**
