@@ -1,6 +1,3 @@
-//TODO get domain from .env file
-const endpoint = "http://localhost:4000/graphql/";
-
 /**
   * @example
   * var dice = 3;
@@ -11,6 +8,12 @@ const endpoint = "http://localhost:4000/graphql/";
  */
 class RestClient {
   static post(query: string, variables?: JSON) {
+    const endpoint = process.env.REACT_APP_API_ENDPOINT ?? "";
+
+    if (!endpoint) {
+      alert("ERROR: Provide endpoint in .env");
+    }
+
     return fetch(endpoint, {
       method: "POST",
       headers: {

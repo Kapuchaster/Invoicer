@@ -4,6 +4,9 @@ import { graphqlHTTP } from "express-graphql";
 import fs from "fs";
 import { buildSchema } from "graphql";
 import path from "path";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const rawInvoice = fs.readFileSync(
   path.resolve(__dirname, "./resources/invoice.json"),
@@ -53,6 +56,6 @@ app.use(
     graphiql: true,
   })
 );
-
-app.listen(4000);
-console.log("Running a GraphQL API server at http://localhost:4000/graphql");
+const { HOST, PORT } = process.env;
+app.listen(PORT);
+console.log(`Running a GraphQL API server at http://${HOST}:${PORT}/graphql`);
