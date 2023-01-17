@@ -2,7 +2,6 @@ import { Logo, ResponsiveRow } from "../..";
 
 import "./styles.css";
 
-// TODO createdAt and due should be Dates
 interface Props {
   invoiceId: string;
   createdAt: string;
@@ -15,7 +14,11 @@ interface Props {
  * It includes company logo and dates
  */
 const InvoiceHeader = ({ invoiceId, createdAt, dueAt, logoSrc }: Props) => {
-  // TODO Convert Date format!
+  // TODO: Maybe createdAt and dueAt should be a date types and
+  // some time service should be used to format them, but for now this solution is fine
+  const formattedCreatedAt = createdAt.replaceAll("-", "/");
+  const formattedDueAt = dueAt.replaceAll("-", "/");
+
   return (
     <ResponsiveRow
       leftElement={
@@ -26,8 +29,8 @@ const InvoiceHeader = ({ invoiceId, createdAt, dueAt, logoSrc }: Props) => {
       rightElement={
         <>
           <p>Invoice #: {invoiceId}</p>
-          <p>Created: {createdAt}</p>
-          <p>Due: {dueAt}</p>
+          <p>Created: {formattedCreatedAt}</p>
+          <p>Due: {formattedDueAt}</p>
         </>
       }
     />
