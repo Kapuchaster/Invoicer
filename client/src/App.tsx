@@ -4,6 +4,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import DndFrame from "./components/organisms/dndTargetBox";
 import { useGetInvoice } from "./hooks/useGetInvoice";
 import { Invoice } from "./pages";
+import isInvoiceType from "./services/validator";
 import { InvoiceType } from "./types";
 
 import "./App.css";
@@ -16,25 +17,35 @@ const App = () => {
     data && setInvoice(data.invoice);
   }, [data]);
 
+  useEffect(() => {
+    error && alert(`Error: ${error}`);
+  }, [error]);
+
   const handleFileDrop = useCallback(
     async (file: File) => {
       if (file) {
         const dndInvoiceText = await file.text();
-        const dndInvoiceJSON = JSON.parse(dndInvoiceText) as InvoiceType;
-        setInvoice(dndInvoiceJSON);
+        const dndInvoiceJSON: InvoiceType = JSON.parse(dndInvoiceText);
+        if (isInvoiceType(dndInvoiceJSON)) {
+          setInvoice(dndInvoiceJSON);
+        } else {
+          alert("json file is not of Invoice type");
+        }
       }
     },
     [setInvoice]
   );
 
   if (loading) return <p>Loading</p>;
-  if (error) return <p>Data Error</p>;
-  if (!invoice) return <p>No Data</p>;
 
   return (
     <DndProvider backend={HTML5Backend}>
       <DndFrame onDrop={handleFileDrop}>
-        <Invoice invoice={invoice} />
+        {invoice ? (
+          <Invoice invoice={invoice} />
+        ) : (
+          <p>Drag Invoice file Here</p>
+        )}
       </DndFrame>
     </DndProvider>
   );

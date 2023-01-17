@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Invoice as InvoiceTemplate } from "../../components";
 import LineItemEditForm from "../../components/organisms/lineItemEditForm";
 import { ModalContext } from "../../HOC/WithModal";
-import { InvoiceType } from "../../types";
+import { InvoiceType, LineItem } from "../../types";
 
 interface Props {
   invoice: InvoiceType;
@@ -17,7 +17,11 @@ const Invoice = ({ invoice }: Props) => {
    * and edit them with actions, however it would be too heave for such
    * a simple App
    */
-  const [lineItems, setLineItems] = useState(invoice.lineItems);
+  const [lineItems, setLineItems] = useState<LineItem[]>([]);
+
+  useEffect(() => {
+    setLineItems(invoice.lineItems);
+  }, [invoice]);
 
   const editLineItem = (
     lineItemIndex: number,
