@@ -1,0 +1,10 @@
+{
+  "companyDetails": {
+    "name": "collectAI GmbH.",
+    "address": "20457 Hamburg",
+    "city": "Hamburg, Germany",
+    "logo": "cai_logo.svg"
+  },
+  "vatRate": 19,
+  "currency": "EUR"
+}
