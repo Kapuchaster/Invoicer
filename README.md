@@ -4,13 +4,13 @@ The application can be adapted to each company via the **client/src/config.json*
 
 # Technology
 ## Frontend
-*React 17
-*CSS styling with BEM styling and Atomic design methodology
+* React 17
+* CSS styling with BEM styling and Atomic design methodology
 
 ## Backend
-*Node
-*Express
-*GraphQL
+* Node
+* Express
+* GraphQL
 
 # Running the App
 ## Server
