@@ -18,7 +18,7 @@ const dragSpaceContent: CSSProperties = {
   flex: 1,
   justifyContent: "center",
   alignItems: "center",
-  border: "3px dotted #3cfaa9",
+  border: "0.1875rem dotted #3cfaa9",
   borderRadius: "1rem",
   margin: "1rem",
   fontSize: "3rem",

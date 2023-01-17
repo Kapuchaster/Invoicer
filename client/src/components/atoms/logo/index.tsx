@@ -5,7 +5,7 @@ interface Props {
 const Logo = ({ src }: Props) => {
   const logoStyle = {
     width: "100%",
-    maxWidth: "300px",
+    maxWidth: "18.75rem",
   };
 
   return <img src={src} style={logoStyle} alt="logo" />;
