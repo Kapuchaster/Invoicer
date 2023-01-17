@@ -1,0 +1,12 @@
+.summary {
+  text-align: right;
+}
+
+.summary__total {
+  font-weight: bold;
+  padding: 0.3125rem;
+}
+
+.summary__vat {
+  padding: 0.3125rem;
+}

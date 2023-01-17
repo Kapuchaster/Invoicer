@@ -22,8 +22,8 @@ const ModalComponent = ({ content, onClose }: Props) => {
       isOpen={!!content}
       onRequestClose={closeModal}
       contentLabel="Modal"
-      className="Modal"
-      overlayClassName="Overlay"
+      className="modal"
+      overlayClassName="modal__overlay"
     >
       <div>{content}</div>
     </Modal>

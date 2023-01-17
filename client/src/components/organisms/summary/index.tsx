@@ -1,3 +1,5 @@
+import "./styles.css";
+
 interface Props {
   total: number;
   vatTotal: number;
@@ -11,11 +13,11 @@ interface Props {
  */
 const Summary = ({ total, vatTotal, vatRate, currency }: Props) => {
   return (
-    <section style={{ textAlign: "right" }}>
-      <p style={{ fontWeight: "bold", padding: "0.3125rem" }}>
+    <section className="summary">
+      <p className="summary__total">
         Total: {total} {currency}
       </p>
-      <p style={{ padding: "0.3125rem" }}>
+      <p className="summary__vat">
         VAT ({vatRate}%): {vatTotal} {currency}
       </p>
     </section>

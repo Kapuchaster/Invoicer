@@ -1,5 +1,7 @@
 import { Invoicee } from "../../../types";
 
+import "./styles.css";
+
 interface Props {
   invoicee: Invoicee;
   company: string;
@@ -13,13 +15,13 @@ interface Props {
  */
 const Companies = ({ company, fullName, email, invoicee }: Props) => {
   return (
-    <section className="container">
-      <div className="container__block container__block--left">
+    <section className="companies">
+      <div className="companies__block companies__block--left">
         <p>{invoicee.name}</p>
         <p>{invoicee.address}</p>
         <p>{invoicee.city}</p>
       </div>
-      <div className="container__block container__block--right">
+      <div className="companies__block companies__block--right">
         <p>{company}</p>
         <p>{fullName}</p>
         <p>{email}</p>

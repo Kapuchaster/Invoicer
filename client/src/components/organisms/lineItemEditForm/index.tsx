@@ -23,7 +23,7 @@ const LineItemEditForm = ({ description, price, onChange }: Props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="form__field--container">
+      <div className="form__field">
         <label>
           description:
           <input
@@ -33,7 +33,7 @@ const LineItemEditForm = ({ description, price, onChange }: Props) => {
           />
         </label>
       </div>
-      <div className="form__field--container">
+      <div className="form__field">
         <label>
           price:
           <input

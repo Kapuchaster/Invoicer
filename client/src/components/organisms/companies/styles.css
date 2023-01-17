@@ -1,0 +1,33 @@
+.companies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.companies__block--left {
+  text-align: left;
+}
+
+.companies__block--right {
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .companies__block {
+    width: 100%;
+  }
+
+  .companies__block--left {
+    text-align: center;
+  }
+
+  .companies__block--right {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .companies__block--right {
+    text-align: center;
+    margin-top: 1.5625rem;
+  }
+}

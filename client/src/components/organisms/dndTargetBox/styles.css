@@ -1,0 +1,21 @@
+.drag-space {
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #03055bb0;
+}
+
+.drag-space__content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: 0.1875rem dotted #3cfaa9;
+  border-radius: 1rem;
+  margin: 1rem;
+  font-size: 3rem;
+  color: white;
+}

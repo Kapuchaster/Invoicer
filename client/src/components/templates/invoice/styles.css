@@ -1,57 +1,13 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.container__logo {
-  /* TODO: Remove it after fitting the Logo */
-  margin-left: -40px;
-}
-
-.container__block--left {
-  text-align: left;
-}
-
-.container__block--right {
-  text-align: right;
-}
-
-.invoice__companies--container {
+.invoice__companies {
   margin-top: 2.5rem;
 }
 
-.invoice__table--container {
+.invoice__table {
   margin-top: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
-  .invoice__companies--container {
+  .invoice__companies {
     margin-top: 2.5rem;
-  }
-
-  .container__logo {
-    width: 100%;
-    text-align: center;
-    /* TODO: Remove it after fitting the Logo */
-    margin-left: auto;
-  }
-
-  .container__block {
-    width: 100%;
-  }
-
-  .container__block--left {
-    text-align: center;
-  }
-
-  .container__block--right {
-    text-align: center;
-    margin-top: 2.5rem;
-  }
-
-  .container__block--right {
-    text-align: center;
-    margin-top: 1.5625rem;
   }
 }

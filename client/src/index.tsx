@@ -1,16 +1,16 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { WithModalContext } from "./HOC/WithModal";
+import { withModalContext } from "./HOC/withModal";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 
+const AppWithModal = withModalContext(<App />);
+
 ReactDOM.render(
   <StrictMode>
-    <WithModalContext>
-      <App />
-    </WithModalContext>
+    <AppWithModal />
   </StrictMode>,
   document.getElementById("invoice")
 );

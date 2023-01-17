@@ -1,29 +1,8 @@
-import type { CSSProperties } from "react";
 import type { DropTargetMonitor } from "react-dnd";
 import { useDrop } from "react-dnd";
 import { NativeTypes } from "react-dnd-html5-backend";
 
-const dragSpaceContainer: CSSProperties = {
-  position: "absolute",
-  display: "flex",
-  left: 0,
-  top: 0,
-  height: "100%",
-  width: "100%",
-  background: "#03055bb0",
-};
-
-const dragSpaceContent: CSSProperties = {
-  display: "flex",
-  flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
-  border: "0.1875rem dotted #3cfaa9",
-  borderRadius: "1rem",
-  margin: "1rem",
-  fontSize: "3rem",
-  color: "white",
-};
+import "./styles.css";
 
 const jsonFileType = "application/json";
 
@@ -67,8 +46,8 @@ const DndFrame = ({ children, onDrop }: FrameProps) => {
   return (
     <div>
       {isActive && (
-        <div ref={drop} style={dragSpaceContainer}>
-          <div style={dragSpaceContent}>Put your JSON file here</div>
+        <div ref={drop} className="drag-space">
+          <div className="drag-space__content">Put your JSON file here</div>
         </div>
       )}
       {children}

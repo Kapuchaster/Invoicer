@@ -11,7 +11,7 @@ export const ModalContext = createContext<ModalContextProps>({
   close: () => {},
 });
 
-export const WithModalContext = ({ children }: { children: ReactElement }) => {
+export const withModalContext = (Component: ReactElement) => () => {
   const [hasContent, setContent] = useState<JSX.Element | undefined>();
 
   const handleClose = () => {
@@ -23,7 +23,7 @@ export const WithModalContext = ({ children }: { children: ReactElement }) => {
   return (
     <ModalContext.Provider value={initValue}>
       <>
-        {children}
+        {Component}
         <Modal content={hasContent} onClose={handleClose} />
       </>
     </ModalContext.Provider>

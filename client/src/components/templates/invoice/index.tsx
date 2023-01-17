@@ -37,7 +37,7 @@ const Invoice = ({
           dueAt={dueAt}
           logoSrc={invoicee.logo}
         />
-        <div className="invoice__companies--container">
+        <div className="invoice__companies">
           <Companies
             company={company}
             fullName={fullName}
@@ -46,7 +46,7 @@ const Invoice = ({
           />
         </div>
       </div>
-      <div className="invoice__table--container">
+      <div className="invoice__table">
         <InvoiceTable
           lineItems={lineItems}
           currency={currency}

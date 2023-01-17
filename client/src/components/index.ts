@@ -1,7 +1,4 @@
-export { default as OldTable } from "./OldTable";
-
 // Atoms
-export { default as Flex } from "./atoms/flex";
 export { default as Logo } from "./atoms/logo";
 export { default as Separator } from "./atoms/separator";
 

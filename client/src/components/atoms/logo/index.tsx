@@ -1,14 +1,9 @@
+import "./styles.css";
+
 interface Props {
   src: string;
 }
 
-const Logo = ({ src }: Props) => {
-  const logoStyle = {
-    width: "100%",
-    maxWidth: "18.75rem",
-  };
-
-  return <img src={src} style={logoStyle} alt="logo" />;
-};
+const Logo = ({ src }: Props) => <img src={src} className="logo" alt="logo" />;
 
 export default Logo;
