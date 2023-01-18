@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import DndFrame from "./components/organisms/dndTargetBox";
-import { withModalContext } from "./HOC/withModal";
+import { withModalContext } from "./HOC/WithModal";
 
 const AllTheProviders = ({ children }: { children: ReactElement }) => {
   const ComponentWithModal = withModalContext(children);
