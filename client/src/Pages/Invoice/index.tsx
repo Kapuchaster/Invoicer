@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Invoice as InvoiceTemplate } from "../../components";
 import LineItemEditForm from "../../components/organisms/lineItemEditForm";
 import config from "../../config.json";
-import { ModalContext } from "../../HOC/withModal";
+import { ModalContext } from "../../HOC/WithModal";
 import { InvoiceType, LineItem } from "../../types";
 
 export interface Props {

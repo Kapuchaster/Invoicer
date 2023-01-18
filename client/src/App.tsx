@@ -3,7 +3,7 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import DndFrame from "./components/organisms/dndTargetBox";
 import { useGetInvoice } from "./hooks/useGetInvoice";
-import { Invoice } from "./pages";
+import { Invoice } from "./Pages";
 import isInvoiceType from "./services/validator";
 import { InvoiceType } from "./types";
 

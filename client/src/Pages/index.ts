@@ -1,1 +1,1 @@
-export { default as Invoice } from "./invoice";
+export { default as Invoice } from "./Invoice";
