@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { withModalContext } from "./HOC/WithModal";
+import { withModalContext } from "./HOC/withModal";
 import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
