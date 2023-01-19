@@ -20,7 +20,7 @@ The application can be adapted to each company via the **client/src/config.json*
 * npm run start
 
 ## Client
-* Go to server directory and provide the following command in a terminal
+* Go to client directory and provide the following command in a terminal
 * npm i
 * npm run start
 * (optional) npm run build and deploy on a server
