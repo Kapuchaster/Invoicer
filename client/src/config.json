@@ -1,9 +1,9 @@
 {
   "invoicee": {
-    "name": "collectAI GmbH.",
-    "address": "20457 Hamburg",
-    "city": "Hamburg, Germany",
-    "logo": "cai_logo.svg"
+    "name": "Shop GmbH",
+    "address": "01217 Dresden",
+    "city": "Dresden, Germany",
+    "logo": "logo.svg"
   },
   "vatRate": 19,
   "currency": "EUR"
