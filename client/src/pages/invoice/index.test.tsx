@@ -17,9 +17,9 @@ const __MOCKED_INVOICE__: InvoiceType = {
       price: 10.71,
     },
   ],
-  email: "austinhackett@durgan.org",
-  fullName: "Delaney Howell",
-  company: "Kassulke Group",
+  email: "email@email.com",
+  fullName: "John Doe",
+  company: "JohnDoe Group Gmbh",
   createdAt: "2021-10-11",
   dueAt: "2021-11-01",
 };
@@ -34,18 +34,24 @@ describe("renders Invoice page", () => {
 
     //Header renders correctly
     expect(screen.getByAltText("logo")).toBeInTheDocument();
-    expect(screen.getByText("Invoice #: test_id")).toBeInTheDocument();
-    expect(screen.getByText("Created: 2021/10/11")).toBeInTheDocument();
-    expect(screen.getByText("Due: 2021/11/01")).toBeInTheDocument();
+    expect(
+      screen.getByText(`Invoice #: ${__MOCKED_INVOICE__.id}`)
+    ).toBeInTheDocument();
+    expect(screen.getByText(`Created: 2021/10/11`)).toBeInTheDocument();
+    expect(screen.getByText(`Due: 2021/11/01`)).toBeInTheDocument();
 
     //Companies render correctly
-    expect(screen.getByText("collectAI GmbH.")).toBeInTheDocument();
-    expect(screen.getByText("20457 Hamburg")).toBeInTheDocument();
-    expect(screen.getByText("Hamburg, Germany")).toBeInTheDocument();
+    expect(screen.getByText(`Shop GmbH`)).toBeInTheDocument();
+    expect(screen.getByText(`01217 Dresden`)).toBeInTheDocument();
+    expect(screen.getByText(`Dresden, Germany`)).toBeInTheDocument();
 
-    expect(screen.getByText("Kassulke Group")).toBeInTheDocument();
-    expect(screen.getByText("Delaney Howell")).toBeInTheDocument();
-    expect(screen.getByText("austinhackett@durgan.org")).toBeInTheDocument();
+    expect(
+      screen.getByText(`${__MOCKED_INVOICE__.fullName}`)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(`${__MOCKED_INVOICE__.company}`)
+    ).toBeInTheDocument();
+    expect(screen.getByText(`${__MOCKED_INVOICE__.email}`)).toBeInTheDocument();
 
     //Table render correctly
     const table = screen.getByRole("table");
