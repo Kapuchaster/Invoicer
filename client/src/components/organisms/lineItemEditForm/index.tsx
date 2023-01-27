@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import { LineItem } from "../../../types";
 
-import "./styles.css";
+import styles from "./styles.module.css";
 
 interface Props {
   description: LineItem["description"];
@@ -22,21 +22,23 @@ const LineItemEditForm = ({ description, price, onChange }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form__field">
-        <label>
+    <form className={styles["form"]} onSubmit={handleSubmit}>
+      <div className={styles["form__field"]}>
+        <label className={styles["form__label"]}>
           description:
           <input
+            className={styles["form_input"]}
             type="text"
             value={descriptionValue}
             onChange={(e) => setDescriptionValue(e.target.value)}
           />
         </label>
       </div>
-      <div className="form__field">
-        <label>
+      <div className={styles["form__field"]}>
+        <label className={styles["form__label"]}>
           price:
           <input
+            className={styles["form_input"]}
             type="number"
             step="0.01"
             value={priceValue}

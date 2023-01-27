@@ -1,4 +1,4 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
 interface Props {
   total: number;
@@ -13,11 +13,11 @@ interface Props {
  */
 const InvoiceSummary = ({ total, vatTotal, vatRate, currency }: Props) => {
   return (
-    <section className="summary">
-      <p className="summary__total">
+    <section className={styles["summary"]}>
+      <p className={styles["summary__total"]}>
         Total: {total} {currency}
       </p>
-      <p className="summary__vat">
+      <p className={styles["summary__vat"]}>
         VAT ({vatRate}%): {vatTotal} {currency}
       </p>
     </section>

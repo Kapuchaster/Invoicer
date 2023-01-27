@@ -7,7 +7,7 @@ import {
 import { Invoicee, InvoiceType } from "../../../types";
 import Separator from "../../atoms/separator";
 
-import "./styles.css";
+import styles from "./styles.module.css";
 
 interface Props {
   invoicee: Invoicee;
@@ -39,7 +39,7 @@ const Invoice = ({
           dueAt={dueAt}
           logoSrc={invoicee.logo}
         />
-        <div className="invoice__companies">
+        <div className={styles["invoice__companies"]}>
           <InvoiceCompanies
             company={company}
             fullName={fullName}
@@ -48,7 +48,7 @@ const Invoice = ({
           />
         </div>
       </div>
-      <div className="invoice__table">
+      <div className={styles["invoice__table"]}>
         <InvoiceTable
           lineItems={lineItems}
           currency={currency}

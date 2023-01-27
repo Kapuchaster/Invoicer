@@ -2,7 +2,7 @@ import type { DropTargetMonitor } from "react-dnd";
 import { useDrop } from "react-dnd";
 import { NativeTypes } from "react-dnd-html5-backend";
 
-import "./styles.css";
+import styles from "./styles.module.css";
 
 const jsonFileType = "application/json";
 
@@ -46,8 +46,10 @@ const DndFrame = ({ children, onDrop }: FrameProps) => {
   return (
     <div>
       {isActive && (
-        <div ref={drop} className="drag-space">
-          <div className="drag-space__content">Put your JSON file here</div>
+        <div ref={drop} className={styles["drag-space"]}>
+          <div className={styles["drag-space__content"]}>
+            Put your JSON file here
+          </div>
         </div>
       )}
       {children}
