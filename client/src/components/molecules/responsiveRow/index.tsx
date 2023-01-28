@@ -1,4 +1,4 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
 interface Props {
   leftElement: JSX.Element;
@@ -7,11 +7,15 @@ interface Props {
 
 const ResponsiveRow = ({ leftElement, rightElement }: Props) => {
   return (
-    <section className="responsive-row">
-      <div className="responsive-row__block responsive-row__block--left responsive-row__logo">
+    <section className={styles["responsive-row"]}>
+      <div
+        className={`${styles["responsive-row__block"]} ${styles["responsive-row__block--left"]} ${styles["responsive-row__logo"]}`}
+      >
         {leftElement}
       </div>
-      <div className="responsive-row__block responsive-row__block--right">
+      <div
+        className={`${styles["responsive-row__block"]} ${styles["responsive-row__block--right"]}`}
+      >
         {rightElement}
       </div>
     </section>

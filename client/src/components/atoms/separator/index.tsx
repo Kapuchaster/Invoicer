@@ -1,5 +1,5 @@
-import "./styles.css";
+import styles from "./styles.module.css";
 
-const Separator = () => <div className="separator" />;
+const Separator = () => <div className={styles.separator} />;
 
 export default Separator;

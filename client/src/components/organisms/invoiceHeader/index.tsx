@@ -1,6 +1,6 @@
 import { Logo, ResponsiveRow } from "../..";
 
-import "./styles.css";
+import styles from "./styles.module.css";
 
 interface Props {
   invoiceId: string;
@@ -22,7 +22,7 @@ const InvoiceHeader = ({ invoiceId, createdAt, dueAt, logoSrc }: Props) => {
   return (
     <ResponsiveRow
       leftElement={
-        <div className="header__logo">
+        <div className={styles["header__logo"]}>
           <Logo src={logoSrc} />
         </div>
       }

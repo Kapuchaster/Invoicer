@@ -1,15 +1,15 @@
-form {
+.form {
   background-color: white;
   padding: 1rem;
 }
 
-label {
+.label {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-label input {
+.label__input {
   margin-left: 1rem;
   padding: 0.5rem;
 }

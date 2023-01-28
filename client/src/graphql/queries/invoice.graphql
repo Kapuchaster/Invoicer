@@ -1,0 +1,14 @@
+query GetInvoice {
+  invoice {
+    id
+    email
+    fullName
+    company
+    createdAt
+    dueAt
+    lineItems {
+      description
+      price
+    }
+  }
+}

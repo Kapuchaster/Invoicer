@@ -1,6 +1,6 @@
 {
-  "short_name": "cAI DnD Invoicer",
-  "name": "collectAI Drag and Drop Invoicer",
+  "short_name": "Invoicer",
+  "name": "Invoicer",
   "icons": [
     {
       "src": "favicon.ico",
