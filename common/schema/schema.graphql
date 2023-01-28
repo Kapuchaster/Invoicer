@@ -1,0 +1,19 @@
+type LineItem {
+  description: String!
+  price: Float!
+}
+
+type Invoice {
+  id: String!
+  lineItems: [LineItem!]!
+  email: String!
+  fullName: String!
+  company: String!
+  createdAt: String!
+  dueAt: String!
+}
+
+type Query {
+  hello: String
+  invoice: Invoice!
+}

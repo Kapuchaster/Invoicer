@@ -5,7 +5,7 @@ import DndFrame from "./components/organisms/dndTargetBox";
 import { useGetInvoice } from "./hooks/useGetInvoice";
 import { Invoice } from "./pages";
 import isInvoiceType from "./services/validator";
-import { InvoiceType } from "./types";
+import { Invoice as InvoiceType } from "./__generated__/operations-types";
 
 const App = () => {
   const { data, loading, error } = useGetInvoice();
@@ -23,7 +23,7 @@ const App = () => {
     async (file: File) => {
       if (file) {
         const dndInvoiceText = await file.text();
-        const dndInvoiceJSON: InvoiceType = JSON.parse(dndInvoiceText);
+        const dndInvoiceJSON: unknown = JSON.parse(dndInvoiceText);
         if (isInvoiceType(dndInvoiceJSON)) {
           setInvoice(dndInvoiceJSON);
         } else {

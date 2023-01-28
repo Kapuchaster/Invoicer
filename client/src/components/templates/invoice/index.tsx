@@ -2,9 +2,10 @@ import {
   InvoiceCompanies,
   InvoiceHeader,
   InvoiceSummary,
-  InvoiceTable,
+  InvoiceTable
 } from "../..";
-import { Invoicee, InvoiceType } from "../../../types";
+import { Invoicee } from "../../../types";
+import { Invoice as InvoiceType} from "../../../__generated__/operations-types";
 import Separator from "../../atoms/separator";
 
 import styles from "./styles.module.css";

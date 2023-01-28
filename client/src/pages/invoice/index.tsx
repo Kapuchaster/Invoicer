@@ -3,7 +3,10 @@ import { Invoice as InvoiceTemplate } from "../../components";
 import LineItemEditForm from "../../components/organisms/lineItemEditForm";
 import config from "../../config.json";
 import { ModalContext } from "../../HOC/withModal";
-import { InvoiceType, LineItem } from "../../types";
+import {
+  Invoice as InvoiceType,
+  LineItem,
+} from "../../__generated__/operations-types";
 
 export interface Props {
   invoice: InvoiceType;

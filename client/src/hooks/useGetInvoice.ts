@@ -1,20 +1,6 @@
-import { InvoiceType } from "../types";
+import { GetInvoiceDocument, Invoice } from "../__generated__/operations-types";
 import { useRequestStatus } from "./useRequestStatus";
 
-const invoiceQuery = `query GetInvoice { invoice 
-  { id 
-    email 
-    fullName 
-    company 
-    createdAt 
-    dueAt 
-    lineItems {
-      description
-      price
-    }
-  } 
-}`;
-
 export const useGetInvoice = () => {
-  return useRequestStatus<{ invoice: InvoiceType }>(invoiceQuery);
+  return useRequestStatus<{ invoice: Invoice }>(GetInvoiceDocument);
 };

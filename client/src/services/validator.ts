@@ -1,6 +1,6 @@
-import type { InvoiceType } from "../types";
+import { Invoice } from "../__generated__/operations-types";
 
-function isInvoiceType(obj: unknown): obj is InvoiceType {
+function isInvoiceType(obj: unknown): obj is Invoice {
   return (
     typeof obj === "object" &&
     obj !== null &&

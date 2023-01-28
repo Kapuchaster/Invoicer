@@ -1,5 +1,5 @@
 import { SyntheticEvent, useState } from "react";
-import { LineItem } from "../../../types";
+import { LineItem } from "../../../__generated__/operations-types";
 
 import styles from "./styles.module.css";
 
