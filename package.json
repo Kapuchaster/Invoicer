@@ -1,0 +1,18 @@
+{
+  "name": "@invoicer/app",
+  "version": "1.0.0",
+  "description": "Monorepo App for creating invoices",
+  "private": true,
+  "useWorkspaces": true,
+  "workspaces": [
+    "common",
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "yarn workspace @invoicer/server start & yarn workspace @invoicer/client start",
+    "build": "echo TODO"
+  },
+  "author": "Michal Kapuscinski",
+  "license": "MIT"
+}
