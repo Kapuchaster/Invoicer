@@ -13,22 +13,26 @@ The application can be adapted to each company via the **client/src/config.json*
 * GraphQL
 
 # Running the App
+## Client & Server
+* Go to main directory and provide the following command in a terminal
+* npm i / yarn
+* npm run start / yarn start
 ## Server
 * Go to server directory and provide the following command in a terminal
-* npm i
-* npm run build
-* npm run start
+* npm i / yarn
+* npm run build / yarn build
+* npm run start / yarn start
 
 ## Client
 * Go to client directory and provide the following command in a terminal
-* npm i
-* npm run start
-* (optional) npm run build and deploy on a server
+* npm i / yarn 
+* npm run start / yarn start
+* (optional) npm run build and deploy on a server / yarn build
 
 # Testing
 * Go to client directory and provide the following command in a terminal
-* npm i
-* npm run test
+* npm i / yarn
+* npm run test / yarn test
 
 # TODO
 * Update React to version 18
