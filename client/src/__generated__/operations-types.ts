@@ -52,7 +52,6 @@ export type LineItem = {
 
 export type Query = {
   __typename?: 'Query';
-  hello?: Maybe<Scalars['String']>;
   invoice: Invoice;
 };
 

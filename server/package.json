@@ -4,8 +4,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "copy-schema": "mkdir -p ./dist/resources && cp -r ./resources ./dist/ ",
-    "build": "tsc && npm run copy-schema",
+    "generate": "graphql-codegen --config codegen.ts",
+    "build-resources": "mkdir -p ./dist/resources && cp -r ./resources ./dist/ ",
+    "build-schema": "yarn generate && mkdir -p ./src/schema ./dist/schema && cp -r ../common/schema ./src/ && cp -r ../common/schema ./dist/",
+    "build": "tsc && yarn build-resources && yarn build-schema",
     "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +19,8 @@
     "graphql": "^15.8.0"
   },
   "devDependencies": {
+    "@graphql-codegen/typescript-resolvers": "^2.7.12",
+    "@graphql-tools/schema": "^9.0.14",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.15",
     "@types/node": "^18.11.18",

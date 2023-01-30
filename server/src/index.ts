@@ -1,49 +1,13 @@
+import { makeExecutableSchema } from "@graphql-tools/schema";
 import cors from "cors";
+import dotenv from "dotenv";
 import express from "express";
 import { graphqlHTTP } from "express-graphql";
-import fs from "fs";
-import { buildSchema } from "graphql";
-import path from "path";
-import dotenv from "dotenv";
+import { resolvers, typeDefs } from "./graphql";
 
 dotenv.config();
 
-const rawInvoice = fs.readFileSync(
-  path.resolve(__dirname, "./resources/invoice.json"),
-  "utf8"
-);
-const invoice = JSON.parse(rawInvoice);
-
-// Construct a schema, using GraphQL schema language
-const schema = buildSchema(`
-  type LineItem {
-    description: String!
-    price: Float!
-  }
-  type Invoice {
-    id: String!
-    lineItems: [LineItem!]!
-    email: String!
-    fullName: String!
-    company: String!
-    createdAt: String!
-    dueAt: String!
-  }
-  type Query {
-    hello: String
-    invoice: Invoice!
-  }
-`);
-
-// The root provides a resolver function for each API endpoint
-const root = {
-  hello: () => {
-    return "Hello world!";
-  },
-  invoice: () => {
-    return invoice;
-  },
-};
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 const app = express();
 
@@ -52,7 +16,7 @@ app.use(
   "/graphql",
   graphqlHTTP({
     schema: schema,
-    rootValue: root,
+    rootValue: resolvers,
     graphiql: true,
   })
 );
