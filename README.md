@@ -15,24 +15,24 @@ The application can be adapted to each company via the **client/src/config.json*
 # Running the App
 ## Client & Server
 * Go to main directory and provide the following command in a terminal
-* npm i / yarn
-* npm run start / yarn start
+* yarn
+* yarn start
 ## Server
 * Go to server directory and provide the following command in a terminal
-* npm i / yarn
-* npm run build / yarn build
-* npm run start / yarn start
+* yarn
+* yarn build
+* yarn start
 
 ## Client
 * Go to client directory and provide the following command in a terminal
-* npm i / yarn 
-* npm run start / yarn start
-* (optional) npm run build and deploy on a server / yarn build
+* yarn 
+* yarn start
+* (optional) yarn build and deploy on a server
 
 # Testing
 * Go to client directory and provide the following command in a terminal
-* npm i / yarn
-* npm run test / yarn test
+* yarn
+* yarn test
 
 # TODO
 * Update React to version 18
